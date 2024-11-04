@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        black1: "rgba(0,0,0.8)",
+        black1: "rgba(0,0,0,0.8)",
         banner: "rgb(255,192,23)",
       },
       fontFamily:{
