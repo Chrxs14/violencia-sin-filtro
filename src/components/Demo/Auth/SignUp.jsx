@@ -1,4 +1,6 @@
 import React from "react";
+import { Input } from "../../../utils/Input";
+import { MdKeyboardArrowLeft } from "react-icons/md";
 
 export const SignUp = ({ setSignReq }) => {
   return (
