@@ -5,9 +5,8 @@ import { SignIn } from "./SignIn";
 import { SignUp } from "./SignUp";
 import { SignInOpt } from "./SignInOpt";
 
-export const Auth = () => {
+export const Auth = ({ modal, setModal }) => {
   const [signReq, setSignReq] = useState("");
-  const [modal, setModal] = useState(true);
 
   const hidden = modal ? "visible opacity-100" : "invisible opacity-0";
 
@@ -20,9 +19,10 @@ export const Auth = () => {
         transition-all duration-500
         ${hidden}`}
       >
-        <button 
-        onClick={()=>setModal(false)}
-        className="absolute top-8 right-8 text-2xl hover:opacity-50">
+        <button
+          onClick={() => setModal(false)}
+          className="absolute top-8 right-8 text-2xl hover:opacity-50"
+        >
           <LiaTimesSolid />
         </button>
         <div className="flex flex-col justify-center items-center gap-[3rem]">
