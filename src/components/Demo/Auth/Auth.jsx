@@ -31,7 +31,7 @@ export const Auth = ({ modal, setModal }) => {
           ) : signReq === "sign-in" ? (
             <SignIn setSignReq={setSignReq} />
           ) : signReq === "sign-up" ? (
-            <SignUp setSignReq={setSignReq} />
+            <SignUp setModal={setModal} setSignReq={setSignReq} />
           ) : null}
           <p className="md:w-[30rem] mx-auto text-center text-sm mb-[3rem]">
             Click "Sign In" to agree to foro terms of service and acknowledge
