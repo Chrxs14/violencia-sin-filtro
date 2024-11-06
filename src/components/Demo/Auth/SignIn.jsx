@@ -45,15 +45,17 @@ export const SignIn = ({ setSignReq }) => {
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <Input form={form} setForm={setForm} type="email" title="email" />
         <Input form={form} setForm={setForm} type="password" title="password" />
-        <button className="px-4 py-1 text-sm rounded-full bg-green-700 hover:bg-green-800 text-white w-fit mx-auto">
+        <button
+          className={`px-4 py-1 text-sm rounded-full bg-green-700 hover:bg-green-800 text-white w-fit mx-auto ${
+            loading ? "opacity-50 pointer-events-none" : ""
+          }`}
+        >
           Sign In
         </button>
       </form>
       <button
         onClick={() => setSignReq("")}
-        className={`px-4 py-1 text-sm rounded-full bg-green-700 hover:bg-green-800 text-white w-fit mx-auto ${
-          loading ? "opacity-50 pointer-events-none" : ""
-        }`}
+        className="mt-5 text-sm text-green-600 hover:text-green-700 flex items-center mx-auto"
       >
         <MdKeyboardArrowLeft />
         All sign in options
