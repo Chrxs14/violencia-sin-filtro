@@ -3,12 +3,15 @@ import Home from "./components/Home/Home";
 import Demo from "./components/Demo/Demo";
 import HomeHeader from "./components/Home/HomeHeader";
 import DemoHeader from "./components/Demo/DemoHeader";
+import { Foro } from "./Context/Context";
+import { ToastContainer } from "react-toastify";
 
 function App() {
-  const currentUser = false;
+  const { currentUser } = Foro();
   return (
     <>
       {currentUser ? <HomeHeader /> : <DemoHeader />}
+      <ToastContainer/>
       <Routes>
         {currentUser && <Route path="/" element={<Home />} />}
         {!currentUser && <Route path="/demo" element={<Demo />} />}

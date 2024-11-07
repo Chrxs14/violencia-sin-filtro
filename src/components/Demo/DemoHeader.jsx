@@ -27,7 +27,7 @@ function DemoHeader() {
         <div className="flex items-center gap-5">
           <div className="hidden text-sm sm:flex items-center gap-5">
             {nav.map((link, i) => (
-              <Link to={link.path}> {link.title} </Link>
+              <Link key={i} to={link.path}> {link.title} </Link>
             ))}
           </div>
           <div className="relative">
