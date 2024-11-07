@@ -11,7 +11,7 @@ import img from "../../../assets/profile-icon.jpg";
 import { UserModal } from "../UserModal/UserModal.jsx";
 
 function HomeHeader() {
-  const [modal, setModal] = useState(true);
+  const [modal, setModal] = useState(false);
   return (
     <header className="border-b border-gray-200">
       {/* left side */}
@@ -41,6 +41,7 @@ function HomeHeader() {
           </span>
           <div className="flex items-center relative">
             <img
+            onClick={()=>setModal(true)}
               className="w-[2.3rem] hr-[2.3rem] object-cover rounded-full cursor-pointer"
               src={img}
               alt="profile-img"
@@ -49,8 +50,12 @@ function HomeHeader() {
               <MdKeyboardArrowDown />
             </span>
             <Modal modal={modal} setModal={setModal}>
-              <div>
-                <UserModal/>
+              <div
+                className={`${
+                  modal ? "visible opacity-100%" : "invisible opacity-0"
+                } transition-all duration-250`}
+              >
+                <UserModal />
               </div>
             </Modal>
           </div>
