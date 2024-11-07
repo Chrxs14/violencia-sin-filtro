@@ -4,7 +4,7 @@ export const Modal = ({ children, modal, setModal, hidden }) => {
   return (
     <>
       <div
-        onClick={() => setModal(false)}
+        onClick={() => setModal(modal)}
         className={`bg-white/50 fixed inset-0 z-10
         ${hidden}
         transition-all duration-500`}
