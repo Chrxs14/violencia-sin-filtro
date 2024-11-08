@@ -20,7 +20,7 @@ function HomeHeader() {
   const getUserData = allUsers.find((user) => user.id == currentUser?.uid);
   return (
     <header className="border-b border-gray-200">
-      {userLoading && <Loading/>}
+      {userLoading && <Loading />}
       {/* left side */}
       <div className="size h-[60px] flex items-center justify-between">
         <div className="flex items-center gap-3">
@@ -57,7 +57,7 @@ function HomeHeader() {
           <div className="flex items-center relative">
             <img
               onClick={() => setModal(true)}
-              className="w-[2.3rem] hr-[2.3rem] object-cover rounded-full cursor-pointer"
+              className="w-[2.3rem] h-[2.3rem] object-cover rounded-full cursor-pointer"
               src={getUserData?.userImg ? getUserData?.userImg : img}
               alt="profile-img"
             />
