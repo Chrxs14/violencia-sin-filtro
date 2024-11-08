@@ -64,7 +64,10 @@ export const Profile = () => {
             </div>
           ))}
         </div>
-        <currentActive.comp getUserData={getUserData}/>
+        <currentActive.comp
+          getUserData={getUserData}
+          setEditModal={setEditModal}
+        />
       </div>
       {/* button to open the side bar */}
       <button
@@ -119,7 +122,7 @@ export const Profile = () => {
         </div>
       </Modal>
       {editModal && (
-        <EditProfile editModal={editModal} setEditModal={setEditModal} />
+        <EditProfile getUserData={getUserData} editModal={editModal} setEditModal={setEditModal} />
       )}
     </section>
   );
