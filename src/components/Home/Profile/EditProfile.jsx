@@ -44,7 +44,6 @@ export const EditProfile = ({ editModal, setEditModal, getUserData }) => {
     await uploadBytes(storageRef, form?.userImg);
 
     const imageUrl = await getDownloadURL(storageRef);
-    debugger;
 
     try {
       const docRef = doc(db, "users", getUserData?.userId);
