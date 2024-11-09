@@ -80,7 +80,7 @@ export const EditProfile = ({ editModal, setEditModal, getUserData }) => {
           <div className="flex gap-[2rem]">
             <div className="w-[5rem]">
               <img
-                className="min-h-[5rem] min-w-[5rem] object-cover border border-gray-400 rounded-full"
+                className="min-h-[5rem] max-h-[5rem] min-w-[5rem] object-cover border border-gray-400 rounded-full"
                 src={imageUrl ? imageUrl : form.userImg ? form.userImg : img}
                 alt="profile-img"
               />
