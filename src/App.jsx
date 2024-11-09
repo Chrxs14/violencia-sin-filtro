@@ -6,17 +6,19 @@ import DemoHeader from "./components/Demo/DemoHeader";
 import { Foro } from "./Context/Context";
 import { ToastContainer } from "react-toastify";
 import { Profile } from "./components/Home/Profile/Profile";
+import { Write } from "./components/Home/Write/Write";
 
 function App() {
   const { currentUser } = Foro();
   return (
     <>
       {currentUser ? <HomeHeader /> : <DemoHeader />}
-      <ToastContainer/>
+      <ToastContainer />
       <Routes>
         {currentUser && <Route path="/" element={<Home />} />}
         {!currentUser && <Route path="/demo" element={<Demo />} />}
-        <Route path="/profile/:userid" element={<Profile/>}/>
+        <Route path="/profile/:userid" element={<Profile />} />
+        <Route path="/write" element={<Write />} />
         <Route
           path="*"
           element={<Navigate to={!currentUser ? "/demo" : "/"} />}
